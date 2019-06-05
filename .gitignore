@@ -9,7 +9,7 @@ target/
 *.iws
 
 
-*.class
+
 *.info
 *.properties
 *.jar
