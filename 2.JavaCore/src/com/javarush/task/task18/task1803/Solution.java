@@ -12,6 +12,8 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.println("Куку");
+            System.out.println("Куку");
+            System.out.println("Куку");
         } catch (Exception ex) {
 
         }
