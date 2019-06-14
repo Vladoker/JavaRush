@@ -17,7 +17,7 @@ public class Solution {
 
                 int size = bufferedInputStream.available();
 
-                byte[] buff = new byte[size/2];
+                byte[] buff = new byte[size%2 == 0?size/2:(size/2) + 1];
                bufferedInputStream.read(buff);
                bufferedOutputStream1.write(buff);
 
