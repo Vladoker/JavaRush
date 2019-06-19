@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 public class Solution {
     public static void main(String[] args) {
         int count = 0;
-        try(BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(args.toString()))) {
+        try(BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(args[0]))) {
             int b = -1;
 
             while ((b = bufferedInputStream.read()) != -1){
