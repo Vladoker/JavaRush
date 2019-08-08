@@ -12,21 +12,31 @@ public class Solution  {
 
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             BufferedInputStream inputstream = new BufferedInputStream(new FileInputStream(reader.readLine()));
-            BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(reader.readLine()))
-        ){
-            String name = reader.readLine();
+            FileWriter fileWriter = new FileWriter(reader.readLine())
+        ) {
 
-            int b = -1;
+            StringBuilder builderIn = new StringBuilder(inputstream.available());
+
             ArrayList<Integer> list = new ArrayList<>(inputstream.available());
 
 
-
+            int b = -1;
 
             while ((b = inputstream.read()) != -1) {
-                if (b == 32)continue;
-                if (b >= 3.49) {list.add(b);}
-
+                builderIn.append((char)b);
             }
+
+            String[] digit = builderIn.toString().split(" ");
+
+            for(String s: digit){
+                double d = Double.parseDouble(s);
+                int convert = (int)Math.round(d);
+                String str = convert + " ";
+
+                fileWriter.write(str);
+            }
+            fileWriter.flush();
+
         }
         catch (Exception ex){
 
